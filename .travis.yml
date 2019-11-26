@@ -3,7 +3,7 @@ python:
   - "3.8"
 install:
   - cp contrib/env-sample .env
-  - pip install psycopg2==2.7.4
+  - pip install psycopg2-binary==2.7.4
   - pip install -q -r requirements.txt
 script:
   - python manage.py test
