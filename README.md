@@ -3,7 +3,7 @@
 Sistema de Eventos encomendado pela Morena.
 
 [![Build Status](https://travis-ci.org/jorgeitenjr/eventex.svg?branch=master)](https://travis-ci.org/jorgeitenjr/eventex)
-
+[![Maintainability](https://api.codeclimate.com/v1/badges/2dfe85683c862c8ffd1d/maintainability)](https://codeclimate.com/github/jorgeitenjr/eventex/maintainability)
 ## Como desenvolver?
 
 1. Clone o repositório.
