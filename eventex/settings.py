@@ -142,8 +142,8 @@ LOGGING = {
             'level': 'ERROR',
             'class': 'django.utils.log.AdminEmailHandler'
         },
-        'console':{
-            'level':'DEBUG',
+        'console': {
+            'level': 'DEBUG',
             'class': 'logging.StreamHandler'
         },
     },
