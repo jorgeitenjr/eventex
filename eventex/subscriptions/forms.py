@@ -7,7 +7,7 @@ from eventex.subscriptions.models import Subscription
 class SubscriptionForm(forms.ModelForm):
     def clean_name(self):
         name = self.cleaned_data['name']
-        words = (word.capitalize() for word in name.split())
+        words = [word.capitalize() for word in name.split()]
         return ' '.join(words)
 
     def clean(self):

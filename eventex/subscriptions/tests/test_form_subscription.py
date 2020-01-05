@@ -16,15 +16,20 @@ class SubscriptionFormTest(TestCase):
         form = self.make_validated_form(cpf='ABCD5678901')
         self.assertFormErrorCode(form, 'cpf', 'digits')
 
-    def assertFormErrorMessage(self, form, field, msg):
-        errors = form.errors
-        errors_list = errors[field]
-        self.assertListEqual([msg], errors_list)
-
     def test_cpf_has_11_digits(self):
         """CPF must have 11 digits."""
         form = self.make_validated_form(cpf='1234')
         self.assertFormErrorCode(form, 'cpf', 'length')
+
+    def test_name_must_be_capitalized(self):
+        """Name must be capitalized"""
+        form = self.make_validated_form(name='HENRIQUE bastos')
+        self.assertEqual('Henrique Bastos', form.cleaned_data['name'])
+
+    def assertFormErrorMessage(self, form, field, msg):
+        errors = form.errors
+        errors_list = errors[field]
+        self.assertListEqual([msg], errors_list)
 
     def assertFormErrorCode(self, form, field, code):
         errors = form.errors.as_data()
